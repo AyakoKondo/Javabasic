@@ -27,12 +27,37 @@ public class PTra03_04 {
 		 *
 		 * うるう年の条件
 		 * ● 西暦の年が 4 で割り切れる年は原則として「～年はうるう年です。」
-		 * ● ただし、100で割り切れたら「～年はうるう年ではありません。」
+		 * ● ただし、100で割り切れたら「～年はうるう年ではありません。」100
 		 * ● しかし、400で割り切れるなら「～年はうるう年です。」と表示する
 		 *
 		 * ※ プログラムは何行書いても良いです
+		 * 
+		 * 
 		 */
+		
+		if (num % 4 == 0) {
+			if(num % 100 == 0) {
+				if(num % 400 == 0) {
+					System.out.println(num+"年はうるう年です。");
+				} else {
+					System.out.println(num+"年はうるう年ではありません。");
+				}
+				
+			} else {
+				System.out.println(num+"年はうるう年です。");
+			}
+			
+		} else {
+			System.out.println(num+"年はうるう年ではありません。");
+		}
 
+//		if(num%4 == 0 && num%100 > 0) {
+//			System.out.println(num+"年はうるう年です。");
+//		}else if(num%100 == 0) {
+//			System.out.println(num+"年はうるう年ではありません。");
+//		}else if(num%400 == 0)
+//			System.out.println(num+"年はうるう年です。");
+		
 
 	}
 }
