@@ -42,25 +42,87 @@ public class PTra04_05 {
 			 * ●じゃんけんに、勝った場合はプログラムを終了します
 			 * ●あいこ、又は負けた場合は、勝つまでプログラムが終わりません
 			 *
-			 * ※ プログラムは何行書いても良いです
-			 */
+			 * ※ プログラムは何行書いても良いです*/
+			 
+			
 			if (cpuHand == 0) {
 				System.out.println("グー！");
-
+				if(myHand == 0) {
+					System.out.println("あいこです。");
+				}
+				if(myHand == 1) {
+					System.out.println("あなたの負けです。");
+				}
+				if(myHand == 2) {
+					System.out.println("あなたの勝ちです。プログラムを終了します。");
+					break;
+				}
 
 
 			} else if (cpuHand == 1) {
 				System.out.println("チョキ！！");
+				if(myHand == 0) {
+					System.out.println("あなたの勝ちです。プログラムを終了します。");
+					break;
+				}
+				if(myHand == 1) {
+					System.out.println("あいこです。");
+				}
+				if(myHand == 2) {
+					System.out.println("あなたの負けです。");
+				}
 
 
 
 			} else {
 				System.out.println("パー！！");
-
-
-
+				if(myHand == 0) {
+					System.out.println("あなたの負けです。");
+				}
+				if(myHand == 1) {
+					System.out.println("あなたの勝ちです。プログラムを終了します。");
+					break;
+				}
+				if(myHand == 2) {
+					System.out.println("あいこです。");
+				}
 			}
-
 		}
 	}
 }
+			
+
+			
+			/*if (cpuHand == 0) {
+			System.out.println("グー！");
+			if(myHand == 0) {
+			}
+			if(myHand == 1) {
+			}
+			if(myHand == 2) {
+				break;
+			}
+
+
+		} else if (cpuHand == 1) {
+			System.out.println("チョキ！！");
+			if(myHand == 0) {
+				break;
+			}
+			if(myHand == 1) {
+			}
+			if(myHand == 2) {
+			}
+
+
+
+		} else {
+			System.out.println("パー！！");
+			if(myHand == 0) {
+			}
+			if(myHand == 1) {
+				break;
+			}
+			if(myHand == 2) {
+				
+			}*/
