@@ -55,15 +55,14 @@ public class PTra04_05 {
 				}
 				if(myHand == 2) {
 					System.out.println("あなたの勝ちです。プログラムを終了します。");
-					break;
-				}
+					winFlg  = true;				}
 
 
 			} else if (cpuHand == 1) {
 				System.out.println("チョキ！！");
 				if(myHand == 0) {
 					System.out.println("あなたの勝ちです。プログラムを終了します。");
-					break;
+					winFlg  = true;
 				}
 				if(myHand == 1) {
 					System.out.println("あいこです。");
@@ -81,7 +80,7 @@ public class PTra04_05 {
 				}
 				if(myHand == 1) {
 					System.out.println("あなたの勝ちです。プログラムを終了します。");
-					break;
+					winFlg  = true;
 				}
 				if(myHand == 2) {
 					System.out.println("あいこです。");
