@@ -15,7 +15,7 @@ public class PTra01_05 {
 		c = 'R';// ★ 変数 c に文字「R」を代入してください
 
 
-		System.out.println(c);;// ★ 変数 c の中身を出力してください
+		System.out.println(c);// ★ 変数 c の中身を出力してください
 
 
 	}
