@@ -8,24 +8,31 @@ package practice11;
 
 public class PTra11_03 {
 
+	int number;
+	
 	/*
 	 * ★ PTra11_03クラスに、クラスフィールドでint型のnumberを定義してください
 	 */
 
+	
+	PTra11_03(){
+		this.number++;
 	/*
 	 * ★ PTra11_03クラスのコンストラクタを引数なしで定義してください
 	 * ★ 処理は、クラスフィールドnumberに1を加算してください
 	 */
-
-	public static void main(String[] args) {
-
-		// ★ sumメソッドを呼び出してください
-
 	}
+	
+	public static void main(String[] args) {
+		PTra11_03 pTra11_03 = new PTra11_03();
+		pTra11_03.sum(1,2);// ★ sumメソッドを呼び出してください
+		
+	}
+
 
 	public void sum(int x, int y) {
 		System.out.println("sumメソッドを呼び出しました。" + x + "＋" + y + "＝" + (x + y));
 
-		System.out.println("クラスフィールドnumber：" /* + ★ クラスフィールドnumberの出力をしてください */);
+		System.out.println("クラスフィールドnumber："+this.number/* + ★ クラスフィールドnumberの出力をしてください */);
 	}
 }
