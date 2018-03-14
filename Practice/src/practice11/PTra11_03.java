@@ -24,6 +24,7 @@ public class PTra11_03 {
 	}
 	
 	public static void main(String[] args) {
+		
 		PTra11_03 pTra11_03 = new PTra11_03();
 		pTra11_03.sum(1,2);// ★ sumメソッドを呼び出してください
 		
