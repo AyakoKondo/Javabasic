@@ -6,6 +6,14 @@
  */
 package practice18;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+
+import practice18.entity.Player;
+
 public class PTra18_04 {
 
 	/*
@@ -14,7 +22,29 @@ public class PTra18_04 {
 
 	public static void main(String[] args) {
 
-		/*
+		ArrayList<Player> array = new ArrayList<>();
+
+        try(Scanner scanner = new Scanner(new File("file/BestElevenCandidate.csv"))) {
+           
+        	while (scanner.hasNext()) {
+        		
+        		Player player = new Player();
+				//file/BestElevenCandidate.csvの内容を取得
+				String str = scanner.nextLine();
+				String[] list = str.split(",", 0);
+
+				player.setPosition(list[0]);
+				player.setName(list[1]);
+				player.setCountry(list[2]);
+				player.setTeam(list[3]);
+
+				array.add(player);
+				
+			}
+
+		} catch (FileNotFoundException e) {
+			System.out.println("ファイルが見つかりません");
+		}/*
 		 * ①
 		 * ★ file/BestElevenCandidate.csvの内容を取得し、１行毎にPlayerインスタンスに情報を格納してください
 		 * ★ ArrayListを作成して、Playerインスタンスを格納してください
@@ -22,6 +52,44 @@ public class PTra18_04 {
 
 
 		// ★ ①のArrayListの中からGK1名、DF4名、MF4名, FW2名をランダムで出力してください
-
-	}
+        Collections.shuffle(array);
+        int gkCount = 0;
+        int dfCount = 0;
+        int mfCount = 0;
+        int fwCount = 0;
+        
+        for(Player player : array) {
+        	switch(player.getPosition()) {
+        	case"GK":
+        		if(gkCount < 1) {
+        			System.out.println(player);
+        			gkCount++;
+        		}
+        		break;
+        		
+        	case"DF":
+        		if(dfCount<4) {
+        			System.out.println(player);
+        			dfCount++;
+        		}
+        		break;
+        	
+        	case"MF":
+        		if(mfCount<4) {
+        			System.out.println(player);
+        			mfCount++;
+        		}
+        		break;
+        	
+        	case"FW":
+        		if(fwCount<2) {
+        			System.out.println(player);
+        			fwCount++;
+        		}
+        		break;
+        	
+        	}
+        }
+    }
 }
+
