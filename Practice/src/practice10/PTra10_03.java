@@ -18,7 +18,7 @@ public class PTra10_03 {
 		User us;// ★ User型の変数usを宣言してください
 
 
-		User us1 = new User();// ★ 変数usに、Userクラスのインスタンスを作成・代入してください
+		us = new User();// ★ 変数usに、Userクラスのインスタンスを作成・代入してください
 
 
 		System.out.println("ユーザID（数字）、 ユーザ名、メールアドレス、パスワードをカンマ区切りで入力してください");
@@ -36,20 +36,20 @@ public class PTra10_03 {
 		String[] list = line.split(",",0);
 
 
-		us1.userId = Integer.parseInt(list[0]);
-		us1.userNm = list[1];
-		us1.mail   = list[2];
-		us1.password = list[3];
+		us.userId = Integer.parseInt(list[0]);
+		us.userNm = list[1];
+		us.mail   = list[2];
+		us.password = list[3];
 		
 		// ★ 配列にした値を、usの各フィールドに代入してください
 		// ユーザIDに該当する値が数値でなかった場合は、エラーでプログラムが止まっても良いです
 		
 
 
-		System.out.println(us1.userId);
-		System.out.println(us1.userNm);
-		System.out.println(us1.mail);
-		System.out.println(us1.password);// ★ 変数usに格納されているインスタンスの、フィールドuserId, userNm, mail, passwordを出力してください
+		System.out.println(us.userId);
+		System.out.println(us.userNm);
+		System.out.println(us.mail);
+		System.out.println(us.password);// ★ 変数usに格納されているインスタンスの、フィールドuserId, userNm, mail, passwordを出力してください
 
 	}
 }

@@ -9,8 +9,8 @@ package practice08;
 public class PTra08_03 {
 	public static void main(String[] args) {
 
-		int num = new java.util.Random().nextInt(100);// ★ 0～100のランダムな値を取得して、変数numberに代入してください
-		 System.out.println(num);
+		int num = new java.util.Random().nextInt(101);// ★ 0～100のランダムな値を取得して、変数numberに代入してください
+		 System.out.println("選択された値："+num);
 
 		boolean result = isEvenNumber(num);// ★ 変数resultを宣言し、メソッドisEvenNumberを（変数number）で呼び出した結果を代入してください
 

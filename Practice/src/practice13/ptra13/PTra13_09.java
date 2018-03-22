@@ -35,7 +35,7 @@ public class PTra13_09 {
 	 */
 	public static void main(String[] args) {
 
-		Employee[] employeeList = new Employee[3];
+		Employee[] employeeList = new Employee[NAMEDATA.length];
 		
 		
 		for(int i = 0 ; i < employeeList.length ;i++) {
@@ -49,6 +49,17 @@ public class PTra13_09 {
 		
 			employeeList[i].setDepartmentNm(QUATERDATA[0][i]);
 		}
+		
 		// ★ 定数で定義されている各データを使用して、Employeeインスタンスを３つ作成してください
+		for (Employee emp : employeeList) {
+			System.out.println("---------------------------------");
+			System.out.println("ID:" + emp.getUserId());
+			System.out.println("名前：" + emp.getUserNm());
+			System.out.println("メールアドレス：" + emp.getMail());
+			System.out.println("パスワード：" + emp.getPassword());
+			System.out.println("部署：" + emp.getDepartmentNm());
+			System.out.println("部署人数：" + emp.getDepartmentCnt());
+		}
+	
 	}
 }
